@@ -1,0 +1,107 @@
+DAY 8 
+
+FUNCTIONS
+
+
+function with arguments
+for ex ---             def my_function(something)
+                           #do this with something
+
+                            my_function(123)
+here :
+                          123 (argument) ==something(parameter)
+
+
+
+function with more than 1  arguments
+for ex ---             
+                          def greet_with(name, location):
+                            print(f"hello {name}")
+                            print(f"how's the temperature in your city{location}")
+
+argument 1= name
+argument 2 = location
+
+POSITIONAL ARGUMENTS
+
+  def my_function(a,b,c)
+                           #do this with a
+                           #do this with b
+                           #do this with c
+
+
+my_function(1,2,3)
+here automatically a=1 , b=2 , c=3
+
+
+
+but the other concept called keyword arguments
+
+KEYWORD ARGUMENTS
+
+  def my_function(a,b,c)
+                           #do this with a
+                           #do this with b
+                           #do this with c
+
+
+my_function(c=1,a=2,b=3)
+
+if we change the order of arguments in function it does not affect the value of arguments in code
+
+
+
+
+for rounding the floating number:
+
+1st method       round(number or variable which contains the value of floating number)
+
+2nd method     import math
+                             math.ceil(number or variable which contains the value of floating number)
+
+
+
+
+
+*************use indicators for checking conditionssssssssssss      
+                                 
+                                    for ex :n=0 
+                                                 if condition satisfiy then change it into : n=1
+                                                 else do nothing.......
+
+
+IMP NOTE FOR LOOPS.........
+
+let suppose if we run a loop for integar like   
+                                 for i in range(10):
+                                       the value of i increasing one by one
+
+
+list = hello
+just like this if we run a loop for strings like
+                                 for letter in list:
+                                         the value of letter is increasing one by one
+                                   then letter 1st turn to "h"
+                                    then letter 2nd turn to "e"
+                                     and show on...........in the last it becomes letter = "o"
+
+
+IF WE WANT TO KNOW POSITION OF ANY VALUE  WHICH IS  ASSIGNED IN A LIST:
+
+Then we can use the                   .index function
+
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+plain_text= "hello"
+for letter in plain_text:
+        position = alphabet.index(letter)
+        print (position)
+
+
+
+
+
+
+
+
+

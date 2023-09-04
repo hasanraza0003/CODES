@@ -1,0 +1,99 @@
+DAY 10
+
+Function with Outputs
+
+#CALCULATOR PROJECT
+
+ 
+*return statement in functions...
+
+def format_name(f_name,l_name):
+	formatted_f_name = f_name.title()
+	formatted_l_name = l_name.title()
+	return  f"{formatted_f_name}{formatted_l_name}"
+print(format_name("HasaN ", "razA")
+
+o/p=== Hasan Raza
+
+
+## If we want to convert a string into a Title case letters then we can simply use the     .title()  function in strings...
+
+
+MORE THAN ONE OUTPUT FUNCTION -----
+
+
+def   format_name(f_name,l_name):
+
+	if f_name="" or l_name=""
+	  return "YOU DID NOT ENTER A VALID INPUTS"
+
+	formatted_f_name = f_name.title()
+	formatted_l_name = l_name.title()
+	return  f"{formatted_f_name}{formatted_l_name}"
+
+
+**In python if the statement is true only then it will execute the return statement otherwise not:::
+def is_leap(year):
+  if year % 4 == 0:
+    if year % 100 == 0:
+      if year % 400 == 0:
+        return True
+      else:
+        return False
+    else:
+      return True
+  else:
+    return False
+
+def days_in_month(year,month):
+  month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]  
+  if is_leap(year) and month == 2:                 *** if this condition satisfies then it will return the output otherwise it will skip the return value and jump  over the next instruction....
+    return 29
+  return month_days[month-1]
+
+
+
+
+##  DOCSTRING  ##
+
+In python docstring will represent with the help of triple quotes       """         """    , in this triple quotes we can write as much as i want to write the comment for the hint or instruction...
+
+for example : 
+
+def days_in_month(year,month):
+""" first enter the value of year                                                               ***this text will show up at the time of the calling function
+and secondly enter the value of month                      		like --- days_in_month(                                  )
+then the fucntion will automatically 					*here this text will pop up
+execute your instruction 
+
+thank you
+"""
+ 
+ month_days = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]  
+  if is_leap(year) and month == 2:
+    return 29
+  return month_days[month-1]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

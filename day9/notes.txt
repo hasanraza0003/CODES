@@ -1,0 +1,83 @@
+DAY 9
+
+DICTIONARY AND NESTING
+
+ dictionary  is represented in python with using curly braces     {  }
+dictionary can contain    :::  { key : values }
+multiple dictionary  can represent in pyhton :::: { key1: values , key2 : values ,..............keyn : values }
+if dictionary does not contain typed value then it can show :::::  key error
+
+
+adding  or edit the previous  item in dictionary :
+           dictionary_name["key"]="value........."
+t
+
+
+if we want to create an empty dictionary in python then we simply create:::
+                    empty_string={ }
+
+
+if we want to wipe the existing dictionary or deleting all key and values in dictionary  then we simply assign it to :
+dictionary_name = { }
+
+
+Looping in dictionary:::
+
+for thing in dictionary:
+	print(thing)                                                                  ---- it can print all the key values in dictionary
+	print(dictionary_name[thing])                         ---- it can print the all values present in dictionary 
+
+
+print the whole dictionary in one stepo or in other words retrieveing item from dictionary :
+
+	print(dictionary_name["key"])
+
+
+
+
+
+
+NESTING ======
+
+
+nesting a list in a dictionary  :         
+travel_log ={ 
+	"france" : ["paris","lille","dijon"],
+	"germany" : ["berling" , "hamburg" , "stuttgart"]
+	}
+
+
+nested dictionary in dictioanary :
+travel_log = {
+	"france" : {"cities visited" : ["paris", "lille"] }
+	}
+
+
+nesting a dictionary in a list :
+travel_log = [
+	{
+	 "france" : "country",
+	 "cities visited" : ["paris", "lille"]
+	 "total visited" : 12
+	}  , 
+{
+	"germany" : "country",
+	 "cities visited" : ["berlin", "hamburg"]
+	 "total visited" : 5
+	}  
+
+	]	
+
+
+if we want to add an element in a list then we have to use the   .append()    function
+
+
+
+
+
+
+
+
+
+
+

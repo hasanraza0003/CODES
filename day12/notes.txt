@@ -1,0 +1,152 @@
+DAY 12
+
+SCOPE  ::
+
+
+What is namespace:
+A namespace is a system that has a unique name for each and every object in Python. An object might be a variable or a method. Python itself maintains a namespace in the form of a Python dictionary. Let’s go through an example, a directory-file system structure in computers. Needless to say, that one can have multiple directories having a file with the same name inside every directory. But one can get directed to the file, one wishes, just by specifying the absolute path to the file. 
+ 
+
+Types of namespaces :
+ 
+When Python interpreter runs solely without any user-defined modules, methods, classes, etc. Some functions like print(), id() are always present, these are built-in namespaces. When a user creates a module, a global namespace gets created, later the creation of local functions creates the local namespace. The built-in namespace encompasses the global namespace and the global namespace encompasses the local namespace.
+ 
+
+
+
+The lifetime of a namespace :
+ 
+A lifetime of a namespace depends upon the scope of objects, if the scope of an object ends, the lifetime of that namespace comes to an end. Hence, it is not possible to access the inner namespace’s objects from an outer namespace.
+ 
+
+Example: 
+
+# var1 is in the global namespace
+var1 = 5
+def some_func():
+ 
+    # var2 is in the local namespace
+    var2 = 6
+    def some_inner_func():
+ 
+        # var3 is in the nested local
+        # namespace
+        var3 = 7
+As shown in the following figure, the same object name can be present in multiple namespaces as isolation between the same name is maintained by their namespace.
+
+
+
+But in some cases, one might be interested in updating or processing global variables only,
+as shown in the following example, one should mark it explicitly as global and the update or process.  
+Note that the line “count = count +1” references the global variable and therefore uses the global variable, but compare this to the same line written “count = 1”.  Then the line “global count” is absolutely needed according to scope rules.
+
+
+# Python program processing
+# global variable
+ 
+count = 5
+def some_method():
+    global count
+    count = count + 1
+    print(count)
+some_method()
+Output: 
+
+6
+
+Scope of Objects in Python :
+ 
+Scope refers to the coding region from which a particular Python object is accessible. 
+Hence one cannot access any particular object from anywhere from the code, 
+the accessing has to be allowed by the scope of the object.
+Let’s take an example to have a detailed understanding of the same: 
+ 
+
+Example 1: 
+
+
+# Python program showing
+# a scope of object
+ 
+def some_func():
+    print("Inside some_func")
+    def some_inner_func():
+        var = 10
+        print("Inside inner function, value of var:",var)
+    some_inner_func()
+    print("Try printing var from outer function: ",var)
+some_func()
+
+
+
+
+
+
+
+
+
+
+
+
+
+################### Scope ####################
+
+enemies = 1
+
+def increase_enemies():
+    enemies = 2
+    print(f"enemies inside function: {enemies}")
+
+increase_enemies()
+print(f"enemies outside function: {enemies}")
+
+# Local Scope
+
+def drink_potion():
+    potion_strength = 2
+    print(potion_strength)
+
+drink_potion()
+print(potion_strength)
+
+# Global Scope
+player_health = 10
+
+def game():
+    def drink_potion():
+        potion_strength = 2
+        print(player_health)
+
+    drink_potion()
+
+print(player_health)
+
+# There is no Block Scope
+
+game_level = 3
+
+def create_enemy():
+    enemies = ["Skeleton", "Zombie", "Alien"]
+    if game_level < 5:
+        new_enemy = enemies[0]
+
+    print(new_enemy)
+
+
+# Modifying Global Scope
+
+enemies = 1
+
+def increase_enemies():
+    print(f"enemies inside function: {enemies}")
+    return enemies + 1
+
+enemies = increase_enemies()
+print(f"enemies outside function: {enemies}")
+
+#Global Constants
+
+PI = 3.14159
+URL = "https://www.google.com"
+TWITTER_HANDLE = "@yu_angela"
+
