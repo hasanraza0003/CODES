@@ -1,0 +1,73 @@
+DAY  26 
+
+LIST COMPREHENSION
+
+#=>   new_list = [new_item for  item in list ] 
+
+Example =>
+
+WITHOUT COMPREHENSION 			WITH COMPREHENSION
+ numbers = [ 1,2,3]					numbers = [1,2,3]
+new_list=[]					new_list = [ n+1  for  n  in  numbers ] 
+for n in numbers:
+	add = n+1
+new_list.append(add)
+
+
+# list comprehension
+# * integars
+numbers = [1,2,3]
+new_list = [ n+1 for n in numbers]
+print(new_list)
+
+
+# * characters 
+name = "Angela"
+list = [letter for letter in name ]
+print(list)
+
+# range function 
+range_list = [num*2 for num in range(1,5) ]
+print(range_list)
+
+# conditional comprehension  ---  if (test)   =>
+names= ["Alex", "Beth" , "Caroline" , "Dave" ,"Elanor" , "Freddie" ]
+short_names = [name for name in names if len(name)<5]
+long_name = [name.upper() for name in names if len(name)>4]
+print(short_names)
+print(long_name)
+
+
+
+
+## DICTIONARY COMPREHENSION  === >>>
+
+
+1=> new_dict={ new_key:new_value for item in list }
+2=> new_dict={ new_key:new_value  for (key,value)  in dict.items()  }
+3=> new_dict={ new_key:new_value  for (key,value)  in dict.items() if (test) }
+
+
+
+example =>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

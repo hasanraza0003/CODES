@@ -1,0 +1,142 @@
+DAY 24 -25
+
+*copy notes from google -----
+FILE METHODS ====>>>
+
+types of files =>
+text 	--- .txt , .csv , .py
+binary
+
+*** FILE HANDLING CONCEPT IN PYTHON THE   " \ " IF WE WANT TO OPEN A FILE USING BACKSLASH THAN PYTHON LANGIUAGE READ THIS BACKSLASH AS A SPECIAL CHARACTER .....TO GET RID OF THIS PROBLE WE CAN SIMPLY USING 3 METHOD...... 
+
+F:\1JOURNEY_TO-INTERNSHIP\CODES\day24\Mail Merge Project Start\Input\Letters\starting_letter.txt
+
+
+1 => CHANGE THE SINGLE BACKSLASH INTO DOUBLE BACKSLASH
+2 => CHANGE THE BACKSLASH WITH FORWARD SLASH
+3 => OR SIMPLY WRITE   r    AT THE OPENING OF THE FILE 	 r "F:\Input\Letters\starting_letter.txt"
+
+
+
+METHOD 1 			METHOD 2 				METHOD 3
+open("filename" , "mode")                                  file = open("filename")			with open("filename") as f:
+read("filename")                                                       file.read()				content = f.read()
+close("filename")                                                      file.close()				print(content)
+                                                                                            content = file.read()
+				   print(content)
+
+
+file.seek( enter position of cursor)  => send the cursor anywhere in the file name
+file.tell()    			        => check the cursor current position
+
+
+*** for opening any file we have to give the input of relative file path...
+
+HOW TO WRITE IN FILE ===>>>>
+
+there are 6 type of filemode = >
+
+with open("filename", mode = "filemode    (r ,w , a ,r+ ,w+ , a+)")    as file:
+	file.write("\n New text. ") 
+
+
+
+f = open(filename, mode)
+Where the following mode is supported:
+
+r: open an existing file for a read operation.
+w: open an existing file for a write operation. If the file already contains some data then it will be overridden but if the file is not present then it creates the file as well.
+a:  open an existing file for append operation. It won’t override existing data.
+ r+:  To read and write data into the file. The previous data in the file will be overridden.
+w+: To write and read data. It will override existing data.
+a+: To append and read data from the file. It won’t override existing data.
+
+
+
+
+CSV FILES (COMMA,SEPARATED ,VALUE) ===>>>
+
+METHOD 1 ==>>
+
+with open(r"F:\1JOURNEY_TO-INTERNSHIP\CODES\day25\227 - weather-data.csv") as data:
+data_list = data.readlines()
+ print(data_list)
+
+
+METHOD 2 ==>>
+
+import csv
+
+ with open(r"day25\227 - weather-data.csv") as data:
+  data_list = csv.reader(data)
+
+
+METHOD 3  ==>>
+
+PANDAS LIBRARY   FOR DATA ANALYTICS AND DATA SCIENCE  ==>>>>
+
+import pandas
+
+x= pandas.read_csv(r"day25\227 - weather-data.csv")
+print(x)
+
+
+import pandas
+
+x= pandas.read_csv(r"day25\227 - weather-data.csv")
+
+print(x)      ## to print whole csv file data
+
+x.to_dict()              # convert csv into dictionary
+x["temp"].to_list()      # convert csv into list
+
+
+#calculating average without using pandas
+temp = x["temp"].to_list()
+avg = sum(temp) / len(temp)
+print(avg)
+
+#calculating avg with using pandas 
+print(x["temp"].mean())
+
+#calculating max with using pandas
+print(x["temp"].max())
+
+#get data in columns
+print(x["condition"])
+print(x.condition)
+
+# get data in row
+print(x[x.day == "Monday"])
+
+#  * get the max temprature row from the data file 
+print(x[x.temp == x.temp.max()])
+
+# print monday temprature and converted into farenheit 
+y = x[x.day == "Monday"]
+c_to_f = (y.temp * (9/5))+32
+print(c_to_f)
+
+
+#create a data_frame from scratch : 
+data_dict = {
+    "student": ["amy" , "james" , "angela"] ,
+    "scores" : [75,78,72]
+}
+
+data = pandas.DataFrame(data_dict)
+data.to_csv("new_data.csv")
+print(data)
+
+
+
+
+
+
+
+
+
+
+
+
+

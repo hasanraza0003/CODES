@@ -1,0 +1,88 @@
+DAY 16
+
+OBJECT ORIENTED PROGRAMMING
+
+
+
+ BASICS ----
+
+
+IF WE WRITE A BUNCH OF LINES CODE THEN IN PROCEDURAL PROGRAMMING IT IS MORE COMPLEX......
+TO MAINTAIN A SIMPLE RELATIONSHIP IN LONG CODES....WE CAN WRITE THE PROGRAM INTO THE OBJECT ORIENTED PROGRAMMING
+
+THE OOP CAN BREAK THE WHOLE PROBLEM INTO THE SOME PARTS CALL.....MODULES
+AND THIS MODULES IS REUSABLE IN SOME OTHER TYPE OF PROBLEM
+ALSO WE CAN WORK TOGETHER IN A SINGLE PROJECT WITH OOPS CONCEPT.........EACH TEAM MEMBER CAN WORK INTO A SEPARATE
+MODULES....AND AFTER COMPLETING ALL MODULES WE CAN JOIN ALL THE MODULES TO SOLVE THAT PARTICULAR PROBLEM...
+
+FOR EXAMPLE --::
+
+WE CREATED A RESTAURANT (IN RESTAURANT WE NEED SOME PEOPLE TO WORK)                 IN OOPS THIS IS CALLED  MODULES
+LIKE   ===  MANAGER ,  WAITER , CHEF  , CLEANER                                                                                                IN OOPS THIS IS CALLED  CLASS
+ 
+
+THE  WAITER  CLASS CAN CONTAIN -----    (HAS)          ATTRIBUTES              VARIABLES
+                                                                                               (DOES)       METHODS                   FUNCTION 
+
+
+IN  BLUEPRINT OF  WAITER  CLASS  WE CAN CREATE TWO WAITERS :
+
+ WAITER -----     HENRY 
+                                  BETTY
+
+  CLASS ===== OBJECT
+
+
+
+
+CONSTRUCTING A OBJECTS---
+
+car =  Car()
+IF WE WANT TO CALL THE CLASS ----
+             CLASS IS STARTED WITH CAPITAL LETTER
+
+CALLING MODULES IMPORT CLASS AND CREATE OBJECTS-----::
+  
+                                          METHOD 1 								        		             METHOD 2
+import cars											from cars import CarBlueprint
+*here we import cars module or library									*here we import a class from car module
+
+OBJECT ==== CLASS											OBJECT ==== CLASS
+car                =      cars.CarBlueprint()									car                =     CarBlueprint()
+
+
+                                                    here we create a object called car and assign the value of CarBlueprint class which is created in a cars module.......
+
+
+
+
+TURTLE  LIBRARY ------ :::
+
+**** For Acces to all resource in Turtle Library Check Into python.org and search Turtle library****
+
+how to call a class from module ----
+
+from turtle import Turtle , Screen
+timmy = Turtle()
+my_screen = Screen()
+***here we create a object called timmy and assign the Turtle() class into it
+
+how to access attributes in class ----
+print(my_screen.canvheight)
+
+how to access methods in class ----
+my_screen.exitonclick()
+timmy.shape("turtle")
+
+
+
+
+
+
+
+
+
+
+
+
+

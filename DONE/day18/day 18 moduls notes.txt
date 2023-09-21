@@ -1,0 +1,62 @@
+DAY 18  - 19
+TURTLE  GRAPHICS
+
+#Importing module =>
+
+import turtle
+from turtle import Screen
+from turtle import *
+
+#Aliasing modules =>
+
+import  turtle_ubsa_dfuib_aeiu_feqr_g__b   as  t
+
+
+#Installing modules =>
+
+python.org/pypi
+
+**installing modules from internet because this module is not preset in python
+	pip install heroes
+
+import heroes 
+print(heroes.gen())
+
+
+
+
+
+#USING KEYWORD IN TURTLE 
+
+turtle.Screen.listen()   method is used...
+
+screen.listen()
+screen.onkey(key="space or other " , fun = "create a function which is used when we press that particular key")
+
+  * for clear screen ===== t.clear()
+*for clear everything ===== screen.clear()
+
+
+
+
+
+for creating multiple turtle : =
+
+ all_turtles=[]
+
+for turtle_index in range(6):
+    new_turtle=Turtle(shape="turtle")
+    all_turtles.append(new_turtle)
+
+*it can create 6 turtle.....
+
+
+
+
+
+
+
+
+
+
+

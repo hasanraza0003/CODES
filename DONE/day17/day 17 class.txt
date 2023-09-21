@@ -1,0 +1,79 @@
+DAY 17 
+
+CREATE YOUR OWN CLASS  ::::
+
+CREATING A CLASS WITH THE HELP OF       class Classname():
+					DO SOMETHING
+IF WE WANT TO CREATE A EMPTY CLASS          class User():
+WE USE THE  pass  STATEMENT					pass
+
+ALL CLASS ARE MADE IN   PascalCase  ....							PascalCase 
+											camelCase
+											snake_case
+
+*****WORKING WITH  ATTRIBUTE :::
+
+ class User():
+	
+	def __init__(self,user_id,username):
+		self.id=user_id
+		self.username= username
+		self.follower= 0
+		self.following=0
+
+user_1=User("001","Hasan")
+user_2=User("002","Raza")
+
+
+print (user_1)
+print(user_2)
+
+****WORKING WITH METHODS  :::
+
+	def follow(self, user):
+		user.follower +=1
+		self.following +=1 
+
+user_1.follow(user_2)
+
+print(user_1.follower)
+print(user_1.following)
+print(user_2.follower)
+print(user_2.following)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
